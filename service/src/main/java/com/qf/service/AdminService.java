@@ -17,4 +17,5 @@ public class AdminService extends ServiceImpl<AdminMapper, Admin> {
 		wrapper.lambda().eq(Admin::getAccount,account);
 		return this.getOne(wrapper);
 	}
+
 }

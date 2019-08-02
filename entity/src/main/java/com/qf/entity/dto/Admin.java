@@ -8,7 +8,7 @@ import com.qf.entity.base.BaseDto;
 public class Admin extends BaseDto {
 
   @TableField("role_id")
-  private long roleId;
+  private Long roleId;
   @TableField("name")
   private String name;
   @TableField("account")
@@ -18,11 +18,11 @@ public class Admin extends BaseDto {
   @TableField("description")
   private String description;
 
-  public long getRoleId() {
+  public Long getRoleId() {
     return roleId;
   }
 
-  public void setRoleId(long roleId) {
+  public void setRoleId(Long roleId) {
     this.roleId = roleId;
   }
 

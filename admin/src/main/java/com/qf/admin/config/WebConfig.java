@@ -22,6 +22,7 @@ public class WebConfig extends WebMvcConfigurationSupport {
 		argumentResolvers.add(new ServletWebArgumentResolverAdapter(new ArgumentResolver()));
 	}
 
+	//加入拦截器后默认静态资源失效
 	protected void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/css/**").addResourceLocations("classpath:static/css/");
 		registry.addResourceHandler("/js/**").addResourceLocations("classpath:static/js/");

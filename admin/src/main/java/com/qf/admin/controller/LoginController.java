@@ -29,7 +29,7 @@ public class LoginController {
 
 	@RequestMapping("login")
 	public String doLogin(Model model , String username,String password){
-		if (username == null || password == null){
+		if (username == null || password == null) {
 			return "forward:/";
 		}
 		UsernamePasswordToken token = new UsernamePasswordToken(username,password);
@@ -37,7 +37,7 @@ public class LoginController {
 		try {
 			subject.login(token);
 			if (subject.isAuthenticated()){
-				return "forward:/index"; //登陆成功
+				return "redirect:/index"; //登陆成功
 			}
 		}catch (AuthenticationException e){
 		}

@@ -7,14 +7,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
-@ControllerAdvice
+@ControllerAdvice//controller增强
 public class ExceptionControllerAdvice {
 
-	@ExceptionHandler
+	@ExceptionHandler(Exception.class)
 	@ResponseBody
 	public Result<?> handeleBusinessException(HttpServletRequest request,Exception e){
-		String errmsg = e.getMessage();
-		return Result.error(errmsg);
+		return Result.error(e.getMessage());
 	}
 
 }
