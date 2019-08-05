@@ -10,6 +10,7 @@
         <module>service</module>
         <module>admin</module>
         <module>merchant</module>
+        <module>zmt</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
