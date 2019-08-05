@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Transactional;
 
-@EnableTransactionManagement(proxyTargetClass = true)
-@MapperScan(basePackages = {"com.qf.mapper"})
-@SpringBootApplication
+@EnableTransactionManagement(proxyTargetClass = true) //开启transactional事务注解
+@MapperScan(basePackages = {"com.qf.mapper"})  //mapper包扫描
+@SpringBootApplication  //标识为springboot应用程序
 public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);

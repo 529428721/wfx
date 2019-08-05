@@ -13,6 +13,7 @@ public class ExceptionControllerAdvice {
 	@ExceptionHandler(Exception.class)
 	@ResponseBody
 	public Result<?> handeleBusinessException(HttpServletRequest request,Exception e){
+		e.printStackTrace();
 		return Result.error(e.getMessage());
 	}
 

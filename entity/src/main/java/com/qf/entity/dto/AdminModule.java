@@ -6,16 +6,10 @@ import com.qf.entity.base.BaseDto;
 
 @TableName("admin_module")
 public class AdminModule extends BaseDto {
-	@TableField("name")
+
 	private String name;
-
-	@TableField("url")
 	private String url;
-
-	@TableField("orderNum")
 	private Long orderNum;
-
-	@TableField("parentId")
 	private Long parentId;
 
 

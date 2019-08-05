@@ -19,8 +19,8 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
 		Admin admin = (Admin) subject.getPrincipal();
 
 		if (admin == null) {
-			//response.sendRedirect("/");
-			throw new RuntimeException(ResultCode.LOGIN_ERROR.getDescription());
+			response.sendRedirect("/");
+			//throw new RuntimeException(ResultCode.LOGIN_ERROR.getDescription());
 		}
 		request.setAttribute(Constants.CURRENT_ADMIN, admin);
 		return super.preHandle(request, response, handler);

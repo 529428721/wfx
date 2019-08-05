@@ -9,7 +9,10 @@ public enum ResultCode {
 
     LOGIN_ERROR(2, "账号或密码不正确，请重试。", false),
 
-    LOGIN_SUCCESS(3, "登陆成功", true);
+    LOGIN_SUCCESS(3, "登陆成功", true),
+
+    TEST(4,"金灿",true);
+
 
     private int code = 0;
     private String description = null;
